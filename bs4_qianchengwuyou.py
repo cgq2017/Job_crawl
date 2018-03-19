@@ -37,19 +37,19 @@ def get_information(url):
     for i in range(len(g)):
         g1 = g[i].findAll('a')
         # m=''.join(g[i].get_text().strip().split('\n'))
-        m = g[i].get_text().strip().split('\n')
+        m = g[i].get_text().strip().split('\n')   #标题的获取
         title.append(m[0].strip())
         company.append(m[-4].strip())
         destination.append(m[-3].strip())
         money.append(m[-2].strip())
-        href = g1[0].attrs['href']
+        href = g1[0].attrs['href']   #获取工作链接
         hef.append(href)
         print(m, href)
         try:
-            content_work = craw_spider(g1[0].attrs['href'])
+            content_work = craw_spider(g1[0].attrs['href']) #获取工作内容链接
         except:
             try:
-                time.sleep(1)
+                time.sleep(1)   #防止响应失败
                 content_work = craw_spider(g1[0].attrs['href'])
             except:
                 content_work=''
