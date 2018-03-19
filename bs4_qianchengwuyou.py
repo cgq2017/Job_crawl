@@ -127,5 +127,5 @@ company=[]
 destination=[]
 money=[]
 hef=[]
-information=[]
-start_auto()
+information=[]         #定义列表，将相应信息加入列表，为插入excel做好准备
+start_auto()            #调用这个函数
