@@ -43,4 +43,4 @@ destination=[]
 herf=[]
 money=[]
 # get_information('http://jobs.51job.com/guangzhou-thq/99748341.html?s=01&t=0')
-get_url()
+get_url() #正则表达式，简单的试验
